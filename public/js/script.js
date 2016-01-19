@@ -14,7 +14,8 @@ function myFunc(e) {
   div.style.position = "absolute";
   div.style.left = x + "px";
   div.style.top = y + "px";
-  div.innerHTML = "whatever";
+  div.className = "goal";
+  div.innerHTML = "enter a goal...";
   div.contentEditable = true;
   div.onclick = function(e) {
     e.stopPropagation();
