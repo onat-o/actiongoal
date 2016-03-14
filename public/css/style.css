@@ -1,13 +1,36 @@
 body {
   background-color: #ffe080;
-}
+  font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif; }
 
-div {
-  border: 1px solid black;
-}
+#container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
-.goal {
-  font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif;
-  background-color: white;
-  padding: 5px;
-}
+#outer {
+  padding: 10px 10px 15px 15px; }
+
+#or {
+  width: 120px;
+  display: inline-block; }
+
+button {
+  cursor: pointer;
+  background-color: #fff3cd;
+  font-size: 38px;
+  font-family: inherit;
+  box-shadow: -5px 5px 5px;
+  border-radius: 14px;
+  padding: 12px;
+  outline: none; }
