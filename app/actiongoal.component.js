@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', './login-register/login-register.component', 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,18 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, login_register_component_1, router_1;
     var ActiongoalComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (login_register_component_1_1) {
+                login_register_component_1 = login_register_component_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             ActiongoalComponent = (function () {
@@ -24,8 +30,13 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 ActiongoalComponent = __decorate([
                     core_1.Component({
                         selector: 'actiongoal',
-                        template: '<h1>Under construction.</h1>'
-                    }), 
+                        template: '<router-outlet></router-outlet>',
+                        directives: [router_1.ROUTER_DIRECTIVES],
+                        providers: [router_1.ROUTER_PROVIDERS]
+                    }),
+                    router_1.RouteConfig([
+                        { path: '/login-register', name: 'LoginRegister', component: login_register_component_1.LoginRegisterComponent, useAsDefault: true }
+                    ]), 
                     __metadata('design:paramtypes', [])
                 ], ActiongoalComponent);
                 return ActiongoalComponent;
